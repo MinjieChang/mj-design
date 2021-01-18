@@ -2,9 +2,9 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "happy-ui": ["components/index.ts"],
-      "happy-ui/esm/*": ["components/*"],
-      "happy-ui/lib/*": ["components/*"]
+      "mj-ui": ["components/index.ts"],
+      "mj-ui/esm/*": ["components/*"],
+      "mj-ui/lib/*": ["components/*"]
     },
     "target": "esnext", // 版本
     "module": "commonjs", // 格式

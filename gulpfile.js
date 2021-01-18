@@ -22,7 +22,7 @@ function compileScripts(babelEnv, destDir) {
   process.env.BABEL_ENV = babelEnv;
   return gulp
     .src(scripts)
-    .pipe(babel()) // 使用gulp-babel处理
+    .pipe(babel()) // 使用gulp-babel处理，可将tsx文件编译为js文件
     .pipe(gulp.dest(destDir));
 }
 
