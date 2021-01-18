@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "docz dev",
     "start": "npm run dev",
     "build:doc": "rimraf doc-site && docz build",
-    "preview:doc": "docz serve"
+    "preview:doc": "docz serve",
+    "build:types": "tsc -p tsconfig.build.json && cp -r lib esm"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,7 @@
   "devDependencies": {
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/vfile-message": "^2.0.0",
     "@umijs/fabric": "^2.4.11",
     "docz": "^2.3.1",
     "gatsby-plugin-less": "^4.5.0",
