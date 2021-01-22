@@ -90,7 +90,7 @@ async function generateChangelog() {
  */
 async function push(nextVersion: string) {
   timeLog('推送代码至git仓库', 'start');
-  await run('git add package.json CHANGELOG.md');
+  await run('git add .');
   await run(`git commit -m "v${nextVersion}" -n`);
   await run('git push');
   timeLog('推送代码至git仓库', 'end');
@@ -131,11 +131,11 @@ async function main() {
     // =================== 更新版本号 ===================
     await updateVersion(nextVersion);
     // =================== 更新changelog ===================
-    await generateChangelog();
-    // =================== 代码推送git仓库 ===================
-    await push(nextVersion);
+    await generateChangelog(); 
     // =================== 组件库打包 ===================
     await build();
+    // =================== 代码推送git仓库 ===================
+    await push(nextVersion);
     // =================== 发布至npm ===================
     await publish();
     // =================== 打tag并推送至git ===================
