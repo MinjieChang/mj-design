@@ -2,9 +2,9 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "mj-ui": ["components/index.ts"],
-      "mj-ui/esm/*": ["components/*"],
-      "mj-ui/lib/*": ["components/*"]
+      "mj-design": ["components/index.ts"],
+      "mj-design/esm/*": ["components/*"],
+      "mj-design/lib/*": ["components/*"]
     },
     "target": "esnext", // 版本
     "module": "commonjs", // 格式
